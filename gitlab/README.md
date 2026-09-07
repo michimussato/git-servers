@@ -36,10 +36,10 @@ docker run \
     --rm \
     --hostname my-gitlab-instance \
     --name gitlab \
-    --volume $(pwd)/.volumes/gitlab/logs:/var/log/gitlab:rw \
-    --volume $(pwd)/.volumes/gitlab/data:/var/opt/gitlab:rw \
-    --volume $(pwd)/.volumes/gitlab/etc/:/etc/gitlab/:rw \
-    --volume $(pwd)/gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro \
+    --volume $(git rev-parse --show-toplevel)/.volumes/gitlab/logs:/var/log/gitlab:rw \
+    --volume $(git rev-parse --show-toplevel)/.volumes/gitlab/data:/var/opt/gitlab:rw \
+    --volume $(git rev-parse --show-toplevel)/.volumes/gitlab/etc/:/etc/gitlab/:rw \
+    --volume $(git rev-parse --show-toplevel)/gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro \
     --shm-size 256m \
     -p 8929:8929 \
     -p 443:443 \
@@ -73,7 +73,7 @@ docker stop gitlab
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitlab/docker-compose.gitlab.yml \
+    --file $(git rev-parse --show-toplevel)/gitlab/docker-compose.gitlab.yml \
     --project-name gitlab-evaluation \
     up \
     --remove-orphans \
@@ -86,7 +86,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitlab/docker-compose.gitlab.yml \
+    --file $(git rev-parse --show-toplevel)/gitlab/docker-compose.gitlab.yml \
     --project-name gitlab-evaluation \
     logs \
     --follow
@@ -98,7 +98,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitlab/docker-compose.gitlab.yml \
+    --file $(git rev-parse --show-toplevel)/gitlab/docker-compose.gitlab.yml \
     --project-name gitlab-evaluation \
     down
 ```

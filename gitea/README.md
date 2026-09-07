@@ -36,7 +36,7 @@ docker run \
     --rm \
     --hostname my-gitea-instance \
     --name gitea \
-    --volume $(pwd)/.volumes/gitea/data:/data:rw \
+    --volume $(git rev-parse --show-toplevel)/.volumes/gitea/data:/data:rw \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume /etc/localtime:/etc/localtime:ro \
     -p 3000:3000 \
@@ -70,7 +70,7 @@ docker stop gitea
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitea/docker-compose.gitea.yml \
+    --file $(git rev-parse --show-toplevel)/gitea/docker-compose.gitea.yml \
     --project-name gitea-evaluation \
     up \
     --remove-orphans \
@@ -83,7 +83,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitea/docker-compose.gitea.yml \
+    --file $(git rev-parse --show-toplevel)/gitea/docker-compose.gitea.yml \
     --project-name gitea-evaluation \
     logs \
     --follow
@@ -95,7 +95,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/gitea/docker-compose.gitea.yml \
+    --file $(git rev-parse --show-toplevel)/gitea/docker-compose.gitea.yml \
     --project-name gitea-evaluation \
     down
 ```

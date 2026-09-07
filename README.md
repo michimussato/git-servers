@@ -27,6 +27,10 @@ git clone https://github.com/michimussato/git-servers
 cd git-servers
 ```
 
+> [!TIP]
+>
+> [Get Git root directory](https://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command)
+
 ## Docker Compose
 
 ### Up
@@ -35,7 +39,7 @@ cd git-servers
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/docker-compose.yml \
+    --file $(git rev-parse --show-toplevel)/docker-compose.yml \
     --project-name git-servers-evaluation \
     up \
     --remove-orphans \
@@ -48,7 +52,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/docker-compose.yml \
+    --file $(git rev-parse --show-toplevel)/docker-compose.yml \
     --project-name git-servers-evaluation \
     logs \
     --follow
@@ -60,7 +64,7 @@ docker \
 docker \
     compose \
     --progress plain \
-    --file $(pwd)/docker-compose.yml \
+    --file $(git rev-parse --show-toplevel)/docker-compose.yml \
     --project-name git-servers-evaluation \
     down
 ```
@@ -68,5 +72,5 @@ docker \
 ## Reset Data (`.volumes`)
 
 ```shell
-sudo git clean -X --force --dry-run ./.volumes
+sudo git clean -X --force --dry-run $(git rev-parse --show-toplevel)/.volumes
 ```
