@@ -9,5 +9,7 @@ include:
   - project_directory: ./gitea
     path:
       - ./gitea/docker-compose.gitea.yml
+      # In production, use Postgres as DB backend instead
+      # - ./gitea/docker-compose.gitea-with-postgres.yml
     # env_file:
     #   - .env
