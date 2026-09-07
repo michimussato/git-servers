@@ -1,7 +1,23 @@
+<!-- TOC -->
+* [git-servers](#git-servers)
+  * [Docker Compose](#docker-compose)
+    * [Up](#up)
+    * [Logs](#logs)
+    * [Down](#down)
+  * [Reset Data (`.volumes`)](#reset-data-volumes)
+<!-- TOC -->
+
+---
+
 # git-servers
 
 - [GitLab](./gitlab/README.md)
 - [Gitea](./gitea/README.md)
+
+```shell
+git clone https://github.com/michimussato/git-servers
+cd git-servers
+```
 
 ## Docker Compose
 

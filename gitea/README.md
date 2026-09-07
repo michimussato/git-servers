@@ -1,4 +1,18 @@
+<!-- TOC -->
+* [Gitea](#gitea)
+  * [Docker](#docker)
+    * [Run Container](#run-container)
+    * [Enter Container Shell](#enter-container-shell)
+    * [Stop Container](#stop-container)
+  * [Docker Compose](#docker-compose)
+    * [Up](#up)
+    * [Logs](#logs)
+    * [Down](#down)
+<!-- TOC -->
 
+---
+
+# Gitea
 
 - https://docs.gitea.com/installation/install-with-docker/
 
@@ -85,4 +99,3 @@ docker \
     --project-name gitea-evaluation \
     down
 ```
-

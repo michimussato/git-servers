@@ -1,6 +1,13 @@
 <!-- TOC -->
 * [GitLab](#gitlab)
-  * [Docker run](#docker-run)
+  * [Docker](#docker)
+    * [Run Container](#run-container)
+    * [Enter Container Shell](#enter-container-shell)
+    * [Stop Container](#stop-container)
+  * [Docker Compose](#docker-compose)
+    * [Up](#up)
+    * [Logs](#logs)
+    * [Down](#down)
 <!-- TOC -->
 
 ---
