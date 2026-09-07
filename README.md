@@ -1,5 +1,7 @@
 <!-- TOC -->
 * [git-servers](#git-servers)
+  * [Requirements](#requirements)
+  * [Clone Repository](#clone-repository)
   * [Docker Compose](#docker-compose)
     * [Up](#up)
     * [Logs](#logs)
@@ -13,6 +15,12 @@
 
 - [GitLab](./gitlab/README.md)
 - [Gitea](./gitea/README.md)
+
+## Requirements
+
+- [Docker](https://docs.docker.com/engine/install/#installation-procedures-for-supported-platforms)
+
+## Clone Repository
 
 ```shell
 git clone https://github.com/michimussato/git-servers
