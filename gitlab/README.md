@@ -45,7 +45,7 @@ docker run \
     -p 443:443 \
     -p 2424:22 \
     --entrypoint /bin/bash \
-    gitlab/gitlab-ce:latest \
+    docker.io/gitlab/gitlab-ce:latest \
     /assets/init-container
 ```
 
