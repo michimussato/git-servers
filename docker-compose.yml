@@ -3,9 +3,11 @@ include:
   - project_directory: ./gitlab
     path:
       - ./gitlab/docker-compose.gitlab.yml
+    # env_file:
+    #   - .env
   # Gitea
   - project_directory: ./gitea
     path:
       - ./gitea/docker-compose.gitea.yml
     # env_file:
-    #   - ./__SECRET__env/portainer.env
+    #   - .env

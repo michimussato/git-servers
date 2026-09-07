@@ -22,7 +22,7 @@ docker run \
     --rm \
     --hostname my-gitea-instance \
     --name gitea \
-    --volume ../.volumes/gitea/data:/data:rw \
+    --volume $(pwd)/.volumes/gitea/data:/data:rw \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume /etc/localtime:/etc/localtime:ro \
     -p 3000:3000 \

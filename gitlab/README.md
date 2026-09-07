@@ -29,10 +29,10 @@ docker run \
     --rm \
     --hostname my-gitlab-instance \
     --name gitlab \
-    --volume ./.volumes/gitlab/logs:/var/log/gitlab:rw \
-    --volume ./.volumes/gitlab/data:/var/opt/gitlab:rw \
-    --volume ./.volumes/gitlab/etc/:/etc/gitlab/:rw \
-    --volume ./gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro \
+    --volume $(pwd)/.volumes/gitlab/logs:/var/log/gitlab:rw \
+    --volume $(pwd)/.volumes/gitlab/data:/var/opt/gitlab:rw \
+    --volume $(pwd)/.volumes/gitlab/etc/:/etc/gitlab/:rw \
+    --volume $(pwd)/gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro \
     --shm-size 256m \
     -p 8929:8929 \
     -p 443:443 \

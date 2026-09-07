@@ -18,5 +18,5 @@ services:
       - ../.volumes/gitlab/logs:/var/log/gitlab:rw
       - ../.volumes/gitlab/data:/var/opt/gitlab:rw
       - ../.volumes/gitlab/etc/:/etc/gitlab/:rw
-      - ./gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro
+      - ./static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro
     shm_size: '256m'

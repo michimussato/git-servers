@@ -16,7 +16,12 @@ docker \
     up \
     --remove-orphans \
     --detach
-    # `--pull always` to set pull policy to always
+```
+
+## Reset Data (`.volumes`)
+
+```shell
+sudo git clean -X --force --dry-run ./.volumes
 ```
 
 ### Logs
