@@ -4,7 +4,7 @@ networks:
 
 services:
   gitlab:
-    image: gitlab/gitlab-ee:latest
+    image: gitlab/gitlab-ce:latest
     container_name: gitlab
     restart: always
     hostname: 'gitlab.example.com'

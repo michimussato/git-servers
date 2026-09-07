@@ -18,12 +18,6 @@ docker \
     --detach
 ```
 
-## Reset Data (`.volumes`)
-
-```shell
-sudo git clean -X --force --dry-run ./.volumes
-```
-
 ### Logs
 
 ```shell
@@ -45,4 +39,10 @@ docker \
     --file $(pwd)/docker-compose.yml \
     --project-name git-servers-evaluation \
     down
+```
+
+## Reset Data (`.volumes`)
+
+```shell
+sudo git clean -X --force --dry-run ./.volumes
 ```
