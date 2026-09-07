@@ -1,0 +1,22 @@
+networks:
+  gitlab:
+    external: false
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ee:latest
+    container_name: gitlab
+    restart: always
+    hostname: 'gitlab.example.com'
+    networks:
+      - gitlab
+    ports:
+      - '8929:8929'
+      - '443:443'
+      - '2424:22'
+    volumes:
+      - ../.volumes/gitlab/logs:/var/log/gitlab:rw
+      - ../.volumes/gitlab/data:/var/opt/gitlab:rw
+      - ../.volumes/gitlab/etc/:/etc/gitlab/:rw
+      - ./gitlab/static/etc/gitlab/gitlab.rb:/etc/gitlab/gitlab.rb:ro
+    shm_size: '256m'
